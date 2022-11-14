@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mobile form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+	
+<nav>
+<img src="images/moon.png" id="icon">
+</nav>
+	<form action="#">
+		<div class="user-details">
+			<div class="title"> <h2> <strong> Sign up</strong></h2></div>
+			<div class="input-box">
+				
+				<span class="details">
+					 E-mail
+				</span>
+				<input type="text" placeholder="Enter your email" required>
+			</div>
+
+<div class="input-box">
+				<span class="details">
+					 Username
+				</span>
+				<input type="text" placeholder="Enter your username" required>
+			</div>
+
+
+			<div class="input-box">
+				<span class="details">
+					 Last name
+				</span>
+				<input type="text" placeholder="Enter your last name" required>
+			</div>
+
+
+			<div class="input-box">
+				<span class="details">
+					 First name
+				</span>
+				<input type="text" placeholder="Enter your name" required>
+			</div>
+
+
+			<div class="input-box">
+				<span class="details">
+					 Phone number
+				</span>
+
+				<input type="text" placeholder="Enter your number" required>
+			</div>
+
+			<div class="input-box">
+				<span class="details">
+					 Password
+				</span>
+				<input type="text" placeholder="Enter your password" required>
+			</div>
+
+	
+			<div class="input-box">
+
+
+				<span class="details">
+					 Confirm Password 
+				</span>
+			
+						<input type="text" placeholder="Confirm Password" required>
+
+			
+<div id="openModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h3 class="modal-title">Status</h3>
+        <a href="#close" title="Close" class="close">×</a>
+      </div>
+      <div class="modal-body">    
+        <p>Congratulations on successful registration</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+
+<div class="button">
+	<a href="#openModal" class="btn">Submit</a>
+
+
+<p>By clicking the Sign up button,you agree to our <br>
+ <a href="http://schedule.iitu.kz/#/g/timetable/group/348223">Terms and Condition</a>and <a href="https://dl.iitu.edu.kz/">Police and Privacy</a>
+	</p>
+	<p>Already have an account? <a href="#">Login here</a></p>
+
+</div>
+</div>
+
+		</div>
+</div>
+
+</div>
+
+	</form>
+
+	
+
+<script>
+	
+var icon = document.getElementById("icon");
+
+icon.onclick = function(){
+	document.body.classList.toggle("dark-theme");
+	if(document.body.classList.contains("dark-theme")){
+		icon.src = "images/sun.png";
+	}else{
+		icon.src = "images/moon.png"
+	}
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+  console.log(scrollbar);
+  document.querySelector('[href="#openModal"]').addEventListener('click',function(){
+    document.body.style.overflow = 'hidden';
+    document.querySelector('#openModal').style.marginLeft = scrollbar;
+  });
+  document.querySelector('[href="#close"]').addEventListener('click',function(){
+    document.body.style.overflow = 'visible';
+    document.querySelector('#openModal').style.marginLeft = '0px';
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+
+	
